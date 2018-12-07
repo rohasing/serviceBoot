@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="row">
+  <div class="col">
+  <section>
+  <header class="header">
+  <div class="row">
+  <div class="col-md-2">
+  <form name="empForm"> 
+  <table>
+  <tr>
+  <th colspan="2">Add Employee</th>
+  </tr>
+  <tr>
+  <td>Employee Id:</td>
+  <td><input id="employeeId" name="employeeId" ></td>
+  </tr>
+  <tr>
+  <td>Employee Name:</td>
+  <td><input id="employeeName" name="employeeName"></td>
+  </tr>
+  <tr>
+  <td>PAN Number:</td>
+  <td><input id="employeePAN" name="employeePAN" ></td>
+  </tr>
+  <tr>
+  <td>Designation:</td>
+  <td><input id="employeeDesignation" name="employeeDesignation" ></td>
+  </tr>
+  <tr>
+  <td>Domain:</td>
+  <td><input id="employeeDomain" name="employeeDomain" ></td>
+  </tr>
+  <tr>
+  <td>Date of Joining:</td>
+  <td><input id="employeeDOJ" name="employeeDOJ" ></td>
+  </tr>
+  <tr>
+  <td>Date of Birth:</td>
+  <td><input id="employeeDOB" name="employeeDOB" ></td>
+  </tr>
+  <tr>
+  <td>Salary:</td>
+  <td><input id="employeeSalary" name="employeeSalary" ></td>
+  </tr>
+  <tr>
+  <td>Mail Id:</td>
+  <td><input id="employeeMailId" name="employeeMailId" ></td>
+  </tr>
+  <tr>
+  <td>Password:</td>
+  <td><input id="employeePassword" name="employeePassword" ></td>
+  </tr>   
+  <tr>
+  <td colspan="2"> <button type="button" (click)="createEmployee()" class="blue-button">Submit</button></td>
+  </tr>
+  </table>
+  </form>
+  </div>
+  </div>
+  </header>
+  </section>
+ <section class="main">
+ <table class="table">
+  <thead>
+  <tr>
+  <th>#</th>
+  <th>Employee Id:</th>
+  <th>Employee Name:</th>
+  <th>PAN Number:</th>
+  <th>Designation:</th>
+  <th>Domain:</th>
+  <th>Date of Joining:</th>
+  <th>Date of Birth:</th>
+  <th>Salary:</th>
+  <th>Mail Id:</th>
+  <th>Password:</th>
+  <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employees">
+  <th scope="row">{{employee.id}}</th>
+  <td>{{employee.employeeName}}</td>
+  <td>{{employee.employeePAN}}</td>
+  <td>{{employee.employeeDesignation}}</td>
+  <td>{{employee.employeeDomain}}</td>
+  <td>{{employee.employeeDOJ}}</td>
+  <td>{{employee.employeeDOB}}</td>
+  <td>{{employee.employeeSalary}}</td>
+  <td>{{employee.employeeMailId}}</td>
+  <td>{{employee.employeePassword}}</td>
+  <td>
+  <button type="button" class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+  </td>
+  </tr>
+ </tbody>
+  </table>
+  </section>
+  </div>
+  </div>
+ </div>
